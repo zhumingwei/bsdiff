@@ -1,0 +1,41 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(Bilibsdiff) 启动",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/Bilibsdiff",
+            "args": [
+                "${workspaceFolder}/res/origin/libapp.so",
+                "${workspaceFolder}/res/target/libapp.so", 
+                "${workspaceFolder}/res/patch/libapp.so"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            
+        },
+        {
+            "name": "(Bilibspatch) 启动",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/Bilibspatch",
+            "args": [
+                "${workspaceFolder}/res/origin/libapp.so",
+                "${workspaceFolder}/res/target/newlibapp.so", 
+                "${workspaceFolder}/res/patch/libapp.so"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb"
+        }
+    ]
+}
