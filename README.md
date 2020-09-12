@@ -9,7 +9,7 @@ bspatch：根据旧包和差异包生成新包
 ##### 使用cmake编译本地可执行文件
 执行 ./build.sh 生成可执行文件
 使用 vscode即可调试，bsdiff/bspatch
-[img]
+![image](https://github.com/zhumingwei/bsdiff/blob/master/imgs/debug.png)
 ##### 编译android so
 cd project/android
 ./build.sh
@@ -17,13 +17,19 @@ cd project/android
 project/android/bin目录下
 # Examples
 使用androidstudio打开project/android/bilidiff项目编译安装
-[img]
+![image](https://github.com/zhumingwei/bsdiff/blob/master/imgs/example.jpg)
 # Usage
-客户端使用：
+##### 客户端使用：
 粘贴so到我们的主目录libs目录中
 粘贴BSUtil到项目中(包名不能改变),如果需要改变修改代码重新编译
 然后就可以使用BSUtil提供的两个函数:
+```
+生成目标版本文件
+参数：老文件，差异文件，新文件
 public static native void bsPatch(String oldFile,String patch,String output);
+生成差异文件
+参数：老文件，差异文件，新文件
 public static native void bsDiff(String oldFile,String patch,String output);
-电脑端使用:
+```
+##### 电脑端使用:
 运行./build.sh，将会在res/bin目录下生成可执行文件。只需要粘贴到系统bin目录下或者将目录添加到环境变量中就可以使用了
