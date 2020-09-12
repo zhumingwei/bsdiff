@@ -13,7 +13,6 @@ public class BSUtil {
         System.loadLibrary("bsdiff");
     }
 
-    public static native void bsPatchFile(FileDescriptor oldFile,FileDescriptor patchFile, FileDescriptor newFile);
     public static native void bsPatch(String oldFile,String patch,String output);
     public static native void bsDiff(String oldFile,String patch,String output);
 }
